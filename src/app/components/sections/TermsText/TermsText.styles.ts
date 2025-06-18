@@ -5,8 +5,7 @@ import { ThemeType } from '../../../styles/theme'; // device import might not be
 export const TermsTextWrapper = styled.div<{ theme: ThemeType }>`
   width: 100%; /* It will take the width of its container (TextContentWrapper in HeroSection) */
   
-  margin-top: ${({ theme }) => theme.spacing.md}; /* e.g., 16px, adjust as per Figma */
-  padding: 0 ${({ theme }) => theme.spacing.sm}; // Add some horizontal padding if text is very close to edges on mobile
+  margin-top: ${({ theme }) => theme.spacing.xs}; /* e.g., 16px, adjust as per Figma */
 
   a {
     color: ${({ theme }) => theme.colors.textSecondary}; /*  Link color - same as text or slightly different? */

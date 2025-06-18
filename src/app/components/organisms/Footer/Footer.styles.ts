@@ -17,7 +17,7 @@ export const FooterWrapper = styled.footer<FooterWrapperProps>`
     $displayContext === 'global' &&
     css`
       display: none; /* Hidden on mobile by default */
-      padding: ${theme.spacing.ssm} 0; /* Desktop vertical padding */
+      padding: 0; /* Desktop vertical padding */
 
       @media ${device.laptop} { /* FIGMA CHECK: Desktop breakpoint */
         display: block; /* Shown only on desktop */

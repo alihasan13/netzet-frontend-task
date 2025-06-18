@@ -14,9 +14,7 @@ import { FooterWrapper as StyledFooterWrapperFromOrganism } from '../../../compo
 
 // Define CtaButtonWrapper here if not already defined
 export const CtaButtonWrapper = styled.div<{ theme: ThemeType }>`
-  width: 350px;
-  height: 40px;
-   
+  width: 100%;   
   display: flex;
   justify-content: center;
 
@@ -48,9 +46,9 @@ export const TextContentWrapper = styled.div<{ theme: ThemeType }>`
     text-align: left;
 
     /* Desktop Order for items INSIDE TextContentWrapper */
-    > ${CtaButtonWrapper} { order: 1; margin-top: ${({ theme }) => theme.spacing.ssm}; }
-    > ${QuizTeaserWrapper} { order: 2; margin-top: ${({ theme }) => theme.spacing.ssm}; }
-    > ${TermsTextWrapper} { order: 3; margin-top: ${({ theme }) => theme.spacing.xs }; }
+    > ${CtaButtonWrapper} { order: 1; }
+    > ${QuizTeaserWrapper} { order: 2; }
+    > ${TermsTextWrapper} { order: 3; }
   }
 
      @media ${device.laptopL} {
@@ -58,7 +56,7 @@ export const TextContentWrapper = styled.div<{ theme: ThemeType }>`
     max-width: 580px;
     align-items: flex-start;
     text-align: left;
-    gap: ${({ theme }) => theme.spacing.xs};
+    
 
     /* Desktop Order for items INSIDE TextContentWrapper */
     > ${CtaButtonWrapper} { order: 1; }
@@ -92,15 +90,15 @@ display: flex;
 // Now, HeroSectionWrapper which contains the .hero-container
 export const HeroSectionWrapper = styled.section<{ theme: ThemeType }>`
   width: 100%;
-  padding: ${({ theme }) => theme.spacing.xs} 0;
+  padding:  0;
   overflow: hidden;
   background-color: ${({ theme }) => theme.colors.background};
 
   @media ${device.tablet} {
-    padding: ${({ theme }) => theme.spacing.xs} 0;
+    padding:  0;
   }
     @media ${device.laptopL} {
-    padding: ${({ theme }) => theme.spacing.xs} 0; //change from md to xs 
+    padding:  0; //change from md to xs 
   }
 
   .hero-container {

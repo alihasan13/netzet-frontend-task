@@ -153,9 +153,9 @@ const sizeStyles = (theme: ThemeType, size: ButtonSize = 'medium', hasIconLeft?:
       break;
     case 'large': /* Likely for "GET STARTED" */
       fontSizeValue = theme.fontSizes.buttonText; /* e.g., 1.125rem (18px) or theme.fontSizes.ctaButton */
-      horizontalPaddingBase = theme.spacing.xl;   /* e.g., 32px */
-      verticalPadding = theme.spacing.md;       /* e.g., 16px */
-      iconMargin = theme.spacing.sm;            /* e.g., 8px */
+      horizontalPaddingBase = theme.spacing.xxxl;   /* e.g., 32px */
+      verticalPadding = theme.spacing.xs;       /* e.g., 16px */
+      iconMargin = theme.spacing.xs;            /* e.g., 8px */
       break;
     case 'medium':
     default:
@@ -172,9 +172,8 @@ const sizeStyles = (theme: ThemeType, size: ButtonSize = 'medium', hasIconLeft?:
     padding-top: ${verticalPadding};
     padding-bottom: ${verticalPadding};
     /* Adjust padding if icons are present to maintain balance */
-    padding-left: ${hasIconLeft ? iconMargin : horizontalPaddingBase};
-    padding-right: ${hasIconRight ? iconMargin : horizontalPaddingBase};
-
+    padding-left: ${horizontalPaddingBase};
+    padding-right: ${horizontalPaddingBase};
     .button-icon {
       &.icon-left {
         margin-right: ${iconMargin};

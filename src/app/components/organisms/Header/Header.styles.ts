@@ -33,17 +33,22 @@ export const LogoWrapper = styled.div<{ theme: ThemeType }>`
     color: ${({ theme }) => theme.colors.accentPrimary}; /* Pink color */
   }
 
-  display: flex;
-  align-items: right;
+   
+  a {
+    text-decoration: none;
+    display: inline-block; // Ensures the link wrapper fits the content
+  }
 `;
 
 export const StyledLogoImage = styled.img`
   /* Mobile-first approach: Define mobile styles first */
-  height: 55px; /* Example mobile height */
-  width: 141px;  /* Maintain aspect ratio, or set specific mobile width */
-
+   position: relative;
+  left: 90px; 
+  height: 55px;
+  width: 141px;
   /* Laptop styles */
   @media ${device.laptop} {
+   left: 0;
     height: 45px; /* Your original laptop height */
     width: auto; /* Your original laptop width */
     /* Or use 'auto' for one dimension to maintain aspect ratio if original SVG is well-defined */
