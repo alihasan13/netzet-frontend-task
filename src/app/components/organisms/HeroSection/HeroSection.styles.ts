@@ -35,8 +35,8 @@ export const TextContentWrapper = styled.div<{ theme: ThemeType }>`
 
   /* Mobile Order for items INSIDE TextContentWrapper */
   > ${TermsTextWrapper} { order: 1; margin-top: 0; }
-  > ${StyledFooterWrapperFromOrganism} { order: 2; }
-  > ${CtaButtonWrapper} { order: 3; }
+  > ${StyledFooterWrapperFromOrganism} { order: 2; margin-bottom: ${({ theme }) => theme.spacing.md} }
+  > ${CtaButtonWrapper} { order: 3;  }
   > ${QuizTeaserWrapper} { order: 4; }
 
   @media ${device.laptop} {
@@ -48,7 +48,7 @@ export const TextContentWrapper = styled.div<{ theme: ThemeType }>`
     /* Desktop Order for items INSIDE TextContentWrapper */
     > ${CtaButtonWrapper} { order: 1; }
     > ${QuizTeaserWrapper} { order: 2; }
-    > ${TermsTextWrapper} { order: 3; }
+    > ${TermsTextWrapper} { order: 3; margin-top: ${({ theme }) => theme.spacing.md} }
   }
 
      @media ${device.laptopL} {
@@ -61,7 +61,7 @@ export const TextContentWrapper = styled.div<{ theme: ThemeType }>`
     /* Desktop Order for items INSIDE TextContentWrapper */
     > ${CtaButtonWrapper} { order: 1; }
     > ${QuizTeaserWrapper} { order: 2;}
-    > ${TermsTextWrapper} { order: 3; }
+    > ${TermsTextWrapper} { order: 3; margin-top: ${({ theme }) => theme.spacing.md }
   }
 `;
 

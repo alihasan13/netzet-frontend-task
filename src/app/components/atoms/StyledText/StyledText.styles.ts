@@ -1,3 +1,4 @@
+
 // src/components/atoms/StyledText/StyledText.styles.ts
 import styled, { css } from 'styled-components';
 import { ThemeType, theme as defaultTheme, device as themeDevice } from '../../../styles/theme'; // Import your theme type, theme object, and device helper
@@ -173,11 +174,20 @@ export const TextStyles = {
     font-size: ${defaultTheme.fontSizes.smallTextDesktop}; 
     font-weight: ${defaultTheme.fontWeights.medium}; 
     color: ${defaultTheme.colors.textSecondary}; 
-    line-height: 1.4; 
+    line-height: .1; 
     text-align: center;
 
     @media ${themeDevice.tablet} {
-      font-size: ${defaultTheme.fontSizes.smallTextDesktop}; 
+      font-size: ${defaultTheme.fontSizes.mediumTextDesktop}; 
+      line-height: 1.3; 
+    }
+    @media ${themeDevice.laptop} {
+      font-size: ${defaultTheme.fontSizes.mediumTextDesktop};
+      line-height: 1.3; 
+    }
+    @media ${themeDevice.laptopL} {
+      font-size: ${defaultTheme.fontSizes.mediumTextDesktop};
+      line-height: 1.3; 
     }
     
   `,
@@ -203,7 +213,12 @@ export const TextStyles = {
   @media ${themeDevice.laptop} { 
     font-size: ${defaultTheme.fontSizes.smallTextDesktop}; 
     text-align: left; /* Align with the left-aligned button on desktop */
-    
+    padding-left: 40px;
+  }
+  @media ${themeDevice.laptopL} { 
+    font-size: ${defaultTheme.fontSizes.smallTextDesktop}; 
+    text-align: left; /* Align with the left-aligned button on desktop */
+    padding-left: 40px;
   }
 `,
   

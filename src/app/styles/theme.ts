@@ -55,7 +55,7 @@ export const theme = {
     
     smallText: '0.625rem', // For very small text, like terms, footers etc.
     smallTextDesktop: '0.75rem',
-
+     mediumTextDesktop: '0.85rem',
     footerText: '0.75rem',
     large: '1.25rem', // Make sure this value is correct for your large buttons.
     medium: '1rem',     // 16px
