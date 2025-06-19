@@ -137,7 +137,7 @@ const variantStyles = (theme: ThemeType, variant: ButtonVariant = 'primary') => 
 };
 
 // Define styles for different sizes
-const sizeStyles = (theme: ThemeType, size: ButtonSize = 'medium', hasIconLeft?: boolean, hasIconRight?: boolean) => {
+const sizeStyles = (theme: ThemeType, size: ButtonSize = 'medium') => {
   let horizontalPaddingBase: string;
   let verticalPadding: string;
   let fontSizeValue: string;
@@ -189,7 +189,7 @@ export const StyledButton = styled.button<StyledButtonProps>`
   position: relative; /* For absolute positioning of loader */
   ${baseButtonStyles}
   ${({ theme, variant }) => variantStyles(theme, variant)}
-  ${({ theme, size, hasIconLeft, hasIconRight }) => sizeStyles(theme, size, hasIconLeft, hasIconRight)}
+  ${({ theme, size, hasIconLeft, hasIconRight }) => sizeStyles(theme, size)}
 
   .button-icon {
     display: inline-flex;

@@ -3,7 +3,6 @@
 
 import React, { JSX } from 'react';
 import {
-  DynamicStyledTextProps,
   StyledTextContainer,
   StyledTextWithPresetProps,
   TextStyles, // This now includes 'as'
@@ -18,6 +17,7 @@ export interface TextProps
   children: React.ReactNode;
   className?: string;
   textStyle?: keyof typeof TextStyles; // Public prop name remains 'textStyle'
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   as?: keyof JSX.IntrinsicElements | React.ComponentType<any>; // Add 'as' here for the public API
   hoverColor?:string;
 

@@ -41,6 +41,7 @@ export interface DynamicStyledTextProps {
 
 // Helper function to resolve theme keys or use direct values
 const getValue = (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   themePropertyObject: Record<string, any> | undefined,
   themeKeyOrDirectValue: string | number | undefined
 ): string | number | undefined => {
@@ -227,6 +228,7 @@ export const TextStyles = {
 // Interface for the final StyledText component, allowing a textStyle preset
 export interface StyledTextWithPresetProps extends DynamicStyledTextProps {
   $textStyle?: keyof typeof TextStyles;  // Allows choosing a preset
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   as?: keyof JSX.IntrinsicElements | React.ComponentType<any>; // Allow changing the rendered HTML tag
 }
 

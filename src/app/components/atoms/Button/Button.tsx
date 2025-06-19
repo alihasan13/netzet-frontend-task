@@ -14,6 +14,7 @@ export interface ButtonProps
   disabled?: boolean;
   iconLeft?: React.ReactElement;
   iconRight?: React.ReactElement;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   as?: keyof JSX.IntrinsicElements | React.ComponentType<any>;
   href?: string;
   target?: string;

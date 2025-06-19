@@ -13,7 +13,7 @@ export const FooterWrapper = styled.footer<FooterWrapperProps>`
 
   /* Text alignment is handled by the StyledText preset within the Container */
 
-  ${({ $displayContext, theme }) =>
+  ${({ $displayContext }) =>
     $displayContext === 'global' &&
     css`
       display: none; /* Hidden on mobile by default */
