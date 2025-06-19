@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { ThemeType,device } from '../../../styles/theme'; 
 
 interface StyledContainerProps {
-  theme: ThemeType;
+  theme?: ThemeType;
   fluid?: boolean; 
   maxWidth?: string;
   // fluid?: boolean; // If you want a full-width container sometimes
@@ -18,12 +18,12 @@ export const StyledContainer = styled.div<StyledContainerProps>`
   padding-right: ${({ theme }) => theme.spacing.md}; // Default horizontal padding
   max-width: ${({ theme }) => theme.layout.containerWidth};
   max-width: 1280px; 
-  @media ${({ theme }) => device.tablet} {
+  @media ${ device.tablet} {
     padding-left: ${({ theme }) => theme.spacing.lg}; 
     padding-right: ${({ theme }) => theme.spacing.lg};
   }
 
-  @media ${({ theme }) => device.desktop} {
+  @media ${ device.desktop} {
     padding-left: ${({ theme }) => theme.spacing.xl}; // Even larger padding on desktops (e.g., 32px)
     padding-right: ${({ theme }) => theme.spacing.xl};
   }

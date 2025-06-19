@@ -1,5 +1,5 @@
 // src/components/atoms/Icon/Icon.styles.ts
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { ThemeType } from '../../../styles/theme';
 
 type ColorKeys = keyof ThemeType['colors'];

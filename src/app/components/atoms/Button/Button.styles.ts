@@ -189,7 +189,7 @@ export const StyledButton = styled.button<StyledButtonProps>`
   position: relative; /* For absolute positioning of loader */
   ${baseButtonStyles}
   ${({ theme, variant }) => variantStyles(theme, variant)}
-  ${({ theme, size, hasIconLeft, hasIconRight }) => sizeStyles(theme, size)}
+  ${({ theme, size }) => sizeStyles(theme, size)}
 
   .button-icon {
     display: inline-flex;
